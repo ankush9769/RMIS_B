@@ -3,13 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Industry from './Pages/Industry'
+import Form from './Components/Form'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Industry/>
+    <Industry></Industry>
+    <Form></Form>
     </>
   )
 }

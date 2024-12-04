@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.contact{
+    margin-top: 100px;
+    display: flex;
+    justify-content: end;
+    background-color: rgb(228, 225, 225);
+    width: 100vw;
+    height: 70vh;
+}
+
+.form{
+    border-radius: 50px;
+    background:linear-gradient(to right, #97D9FA, #90B5C7);;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family:Roboto;
+}
+.heading{
+    margin: 20px 40px ;
+    font-weight: 900;
+    font-size: 25px; 
+}
+input{
+    padding: 2px 10px;
+    outline: none;
+    width: 70%;
+    height: 20px;
+    margin: 20px 40px ;
+    border-radius:10px ;
+    font-family:Roboto;
+}
+textarea{
+    resize: none;
+    width: 70%;
+    height: 40px;
+    border-radius:10px ;
+    padding: 2px 10px;
+}
