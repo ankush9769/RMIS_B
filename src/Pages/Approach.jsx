@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Component() {
+export default function Approach() {
   return (
     <div>
-      <p>Hello</p>
+      This is approach page
     </div>
   )
 }

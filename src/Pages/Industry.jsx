@@ -1,10 +1,10 @@
 import React from 'react';
-import Component from '../Components/Component';
+import Card from '../Components/Card';
 
 export default function Industry() {
   return (
     <div>
-      <Component/>
+      <Card/>
     </div>
   )
 }

@@ -1,17 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Industry from './Pages/Industry'
-import Form from './Components/Form'
+import './App.css';
+import Industry from './Pages/Industry';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+import Approach from './Pages/Approach';
+import Contact from './Pages/Contact';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Industry></Industry>
-    <Form></Form>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Approach/>}></Route>
+        <Route path='/industry' element={<Industry/>}></Route>
+        <Route path='/contact' element={<Contact/>}></Route>
+      </Routes>
+    </Router>
     </>
   )
 }
