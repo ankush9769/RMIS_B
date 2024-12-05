@@ -4,8 +4,6 @@ import './style/Contact.css';
 
 function ContactInfo() {
   return (
-   
-<body>
 <div class="contact-details-card">
     <h2 class="heading">Let’s Connect and Create Something Exceptional</h2>
     <p class="body">
@@ -50,8 +48,7 @@ function ContactInfo() {
         </div>
     </div>
 </div>
-<script src="script.js"></script>
-</body>
+
    
   )
 }

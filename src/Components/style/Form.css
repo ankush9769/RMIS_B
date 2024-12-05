@@ -1,44 +1,99 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
 }
-.contact{
-    margin-top: 100px;
+
+.contact {
     display: flex;
-    justify-content: end;
-    background-color: rgb(228, 225, 225);
+    padding: 0rem 4rem;
+    margin-top: 6rem;
     width: 100vw;
-    height: 70vh;
+    height: 68vh;
+    gap: 6rem;
 }
 
-.form{
-    border-radius: 50px;
-    background:linear-gradient(to right, #97D9FA, #90B5C7);;
-    width: 50%;
+.form {
+    border-radius: 3rem;
+    background: linear-gradient(to right, #97D9FA, #90B5C7);
+    ;
+    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    font-family:Roboto;
+    font-family: Roboto;
 }
-.heading{
-    margin: 20px 40px ;
+
+.headings {
+    margin: 2.7rem 2.5rem;
     font-weight: 900;
-    font-size: 25px; 
+    font-size: 25px;
 }
-input{
-    padding: 2px 10px;
+
+.input {
+    border: none;
+    padding: 1.2rem 0.6rem;
     outline: none;
     width: 70%;
-    height: 20px;
-    margin: 20px 40px ;
-    border-radius:10px ;
-    font-family:Roboto;
+    height: 1.3rem;
+    margin: 0.6rem 2.5rem;
+    border-radius: 1.4rem;
+    font-family: Roboto;
+    transition: all 0.3s ease-in-out;
 }
-textarea{
+.input:hover{
+    transform: scale(1.03);
+
+}
+
+.firstinput {
+    margin-top: 0.6rem;
+}
+
+.textarea{
+    margin: 0.6rem 2.5rem;
+    border: none;
     resize: none;
     width: 70%;
-    height: 40px;
-    border-radius:10px ;
-    padding: 2px 10px;
+    height: 4rem;
+    border-radius: 1rem;
+    padding: 0.2rem 0.6rem;
+    transition: all 0.3s ease-in-out;
+}
+.textarea:hover{
+    transform: scale(1.03);
+
+}
+
+.buttondiv {
+    padding: 0.5rem;
+    display: flex;
+    gap: 1.5rem;
+
+}
+
+.button1 {
+    font-weight: 500;
+    color: white;
+    background-color: black;
+    padding: 0.5rem 2.5rem;
+    border-radius: 1.4rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.button2 {
+    font-weight: 500;
+    background-color: #bbe1f4;
+    border: 2px solid #5dbdf1;
+    padding: 0.5rem 2.5rem;
+    border-radius: 1.4rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.button1:hover {
+    transform: scale(1.1);
+}
+
+.button2:hover {
+    transform: scale(1.1);
 }
