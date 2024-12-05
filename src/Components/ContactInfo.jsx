@@ -2,7 +2,7 @@ import React from 'react';
 import './style/Contact.css';
 
 
-function Contact() {
+function ContactInfo() {
   return (
    
 <body>
@@ -56,4 +56,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default ContactInfo
