@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 .contact {
@@ -22,6 +23,7 @@
     justify-content: start;
     align-items: center;
     font-family: Roboto;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .headings {
@@ -31,7 +33,7 @@
 }
 
 .input {
-    border: none;
+    border: 1px solid white;
     padding: 1.2rem 0.6rem;
     outline: none;
     width: 70%;
@@ -39,11 +41,9 @@
     margin: 0.6rem 2.5rem;
     border-radius: 1.4rem;
     font-family: Roboto;
-    transition: all 0.3s ease-in-out;
 }
 .input:hover{
-    transform: scale(1.03);
-
+    border: 1px solid #000;
 }
 
 .firstinput {
@@ -51,18 +51,16 @@
 }
 
 .textarea{
+    border: 1px solid white;
     margin: 0.6rem 2.5rem;
-    border: none;
     resize: none;
     width: 70%;
     height: 4rem;
     border-radius: 1rem;
     padding: 0.2rem 0.6rem;
-    transition: all 0.3s ease-in-out;
 }
 .textarea:hover{
-    transform: scale(1.03);
-
+    border: 1px solid #000;
 }
 
 .buttondiv {
