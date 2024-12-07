@@ -25,7 +25,7 @@ function ContactInfo() {
             </div>
             <div class="detail">
                  <img src="facebook.svg" alt="Facebook" class="icon" />
-                <a >@------------------</a>
+                <a href="" >@------------------</a>
             </div>
             <div class="detail">
                 <img src="youtube.svg" alt="YouTube" class="icon" />

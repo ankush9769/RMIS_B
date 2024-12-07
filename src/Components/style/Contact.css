@@ -41,15 +41,42 @@
     font-size: 20px;
     }
     
-a:hover {
+/* a:hover {
     text-decoration:underline;
-    }
+    } */
 .contact-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 50vh; /* Full-screen height */
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; 
     
     }
+
+    /* Anchor tag styling */
+  a {
+    text-decoration: none;
+    color: #343232;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+
+  /* Hover effect */
+  a:hover {
+    color: #ff4500; /* Change text color */
+    /* text-decoration: underline; Add underline */
+    font-size: 22px; /* Slightly increase font size */
+  }
+
+  /* Active state */
+  a:active {
+    color: #004080;
+  }
     
     
