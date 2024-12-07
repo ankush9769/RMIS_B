@@ -25,7 +25,8 @@ const Form = () => {
         event.preventDefault();
         console.log(formData); 
       };
-      const handleReset = () => {
+      const handleReset = (event) => {
+        event.preventDefault();
         setFormData({
             name: '',
             email: '',
@@ -37,7 +38,7 @@ const Form = () => {
     return (
         <div className="contact">
                 <Contactinfo></Contactinfo>
-                <form className='form' onSubmit={handleSubmit}>
+                <form className='form'>
                     <p className='headings'>We'd love to hear from you!</p>
                     <input className="input firstinput" name="name" value={formData.name} onChange={handleChange} type="text" placeholder='Enter your full name' />
                     <input className="input" name="email" value={formData.email} onChange={handleChange} type="email" placeholder='Enter your email address' />
@@ -46,7 +47,7 @@ const Form = () => {
                     <textarea className='textarea' name="message" value={formData.message} onChange={handleChange} placeholder="type your message here..." />
                     <div className="buttondiv">
                         <button className='button1' onClick={handleReset}>R E S E T</button>
-                        <button className='button2' type='submit'>S U B M I T</button>
+                        <button className='button2' onClick={handleSubmit}>S U B M I T</button>
                     </div>
                 </form>
         </div>
