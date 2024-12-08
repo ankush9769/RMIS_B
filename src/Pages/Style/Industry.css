@@ -1,0 +1,12 @@
+.industry{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.indusGrid{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
