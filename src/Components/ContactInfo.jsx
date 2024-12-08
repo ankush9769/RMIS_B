@@ -6,7 +6,7 @@ function ContactInfo() {
   return (
 <div className="contact-details-card">
     <h2 className="heading">Let’s Connect and Create Something Exceptional</h2>
-    <p className="body">
+    <p className="para">
          Have questions or ready to start your next big project? We’re here to help—reach out today!
     </p>
      <div className="contact-container">

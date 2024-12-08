@@ -16,82 +16,156 @@
 .form {
     border-radius: 3rem;
     background: linear-gradient(to right, #97D9FA, #90B5C7);
-    ;
     width: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
     align-items: center;
-    font-family: Roboto;
+    justify-content: space-around;
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .headings {
-    margin: 2.7rem 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.3rem;
     font-weight: 900;
     font-size: 25px;
 }
 
 .input {
-    border: 1px solid white;
-    padding: 1.2rem 0.6rem;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 1.3vw 0.6rem;
     outline: none;
     width: 70%;
     height: 1.3rem;
-    margin: 0.6rem 2.5rem;
+    /* margin: 0.6rem 2.5rem; */
     border-radius: 1.4rem;
-    font-family: Roboto;
-}
-.input:hover{
-    border: 1px solid #000;
+    box-shadow: 0 1rem 2rem -1rem rgb(68, 67, 67);
+
+    &:hover {
+        border: 1px solid #000000;
+    }
 }
 
-.firstinput {
-    margin-top: 0.6rem;
-}
 
-.textarea{
+
+.textarea {
     border: 1px solid white;
-    margin: 0.6rem 2.5rem;
+    /* margin: 0.6rem 2.5rem; */
     resize: none;
     width: 70%;
     height: 4rem;
     border-radius: 1rem;
     padding: 0.2rem 0.6rem;
-}
-.textarea:hover{
-    border: 1px solid #000;
+    box-shadow: 0 1rem 2rem -1rem rgb(108, 105, 105);
+
+    &:hover {
+        border: 1px solid #000;
+    }
 }
 
 .buttondiv {
     padding: 0.5rem;
     display: flex;
     gap: 1.5rem;
-
 }
 
 .button1 {
     font-weight: 500;
     color: white;
     background-color: black;
-    padding: 0.5rem 2.5rem;
+    padding: 0.9rem 2.5rem;
     border-radius: 1.4rem;
     transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .button2 {
     font-weight: 500;
     background-color: #bbe1f4;
     border: 2px solid #5dbdf1;
-    padding: 0.5rem 2.5rem;
+    padding: 0.9rem 2.5rem;
     border-radius: 1.4rem;
     transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
-.button1:hover {
-    transform: scale(1.1);
+@media (max-width: 431px) {
+    .contact {
+        align-items: center;
+        padding: 0px 0px;
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+        gap: 2rem;
+    }
+    .headings {
+        font-size: 3.5vw;
+        margin-top: 1rem;
+        margin-bottom: 0.7rem;
+    }
+    .form {
+        border-radius: 4rem;
+        width: 85%;
+        height: 18rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input {
+        font-size: 2vw;
+        padding: 2.3vw 0.6rem;
+        outline: none;
+        width: 80%;
+        height: 3vw;
+        border-radius: 1.4rem;
+        box-shadow: 0 1rem 2rem -1rem rgb(68, 67, 67);
+
+        &:hover {
+            border: 1px solid #000000;
+        }
+    }
+
+    .textarea {
+        border: 1px solid white;
+        /* margin: 0.6rem 2.5rem; */
+        font-size: 2vw;
+        resize: none;
+        width: 80%;
+        height: 3rem;
+        border-radius: 1rem;
+        padding: 0.2rem 0.6rem;
+        box-shadow: 0 1rem 2rem -1rem rgb(108, 105, 105);
+
+        &:hover {
+            border: 1px solid #000;
+        }
+    }
+
+    .buttondiv {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button1 {
+        font-size: 2.2vw;
+        padding: 0.3rem 1.1rem;
+    }
+    .button2 {
+        font-size: 2.2vw;
+        padding: 0.3rem 0.8rem;
+    }
+
 }
 
-.button2:hover {
-    transform: scale(1.1);
-}
+
+
+
