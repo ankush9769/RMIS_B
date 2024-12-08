@@ -1,5 +1,5 @@
 import React from 'react'
-import './style/form.css'
+import './Style/form.css'
 import Contactinfo from '../Components/ContactInfo'
 import { useState } from 'react'
 
