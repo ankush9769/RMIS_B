@@ -9,7 +9,9 @@ export default function Industry() {
     <div className='industry'>
       <div className='indusGrid'>
         {array.map((data) => {
-          return <Card icon={data.icon} title={data.title} description={data.description} />
+          return <div className="indusCard">
+            <Card icon={data.icon} title={data.title} description={data.description} mobileIcon={data.mobileIcon}/>
+          </div>
         })}
       </div>
     </div>

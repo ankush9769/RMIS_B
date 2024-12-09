@@ -6,8 +6,14 @@
 }
 
 .indusGrid{
-    width: 85%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, minmax(14rem, 1fr));
     grid-template-rows: repeat(3, minmax(14rem, 1fr));
+}
+
+.indusCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
