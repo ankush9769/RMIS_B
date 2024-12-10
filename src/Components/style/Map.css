@@ -1,0 +1,125 @@
+:root {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 700; 
+  color-scheme: light; 
+  color: rgba(0, 0, 0, 0.87); 
+  background-color: #f9f9f9; 
+  --font-size-title: clamp(2rem, 5vw, 3.5rem);
+  --font-size-desc: clamp(1.2rem, 2.8vw, 1.8rem); 
+}
+/* 
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eaeaea, #f5f5f5); 
+  animation: fade-in 1s ease-in-out;
+} */
+
+.main {
+  text-align: center;
+  padding: 2rem;
+  width: 90%; 
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  animation: slide-in 1.2s ease forwards; 
+}
+
+.description {
+  font-size: var(--font-size-desc);
+  font-weight: 700; 
+  color: rgba(0, 0, 0, 0.75); 
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.description:hover {
+  transform: scale(1.1); 
+  color: rgba(0, 0, 0, 0.9); 
+}
+
+.map-container {
+  position: relative;
+  width: 100%; 
+  max-width: 896px; 
+  aspect-ratio: 896 / 596; 
+  border-radius: 90px;
+  overflow: hidden;
+  background: #ffffff; 
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+  margin-left: -20px; /* Shift content slightly to the left */
+}
+
+.map-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  transition: transform 0.3s ease; 
+}
+
+.map-frame:hover {
+  transform: scale(1.05); 
+}
+
+.map-container:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-title: clamp(1.8rem, 4vw, 2.8rem);
+    --font-size-desc: clamp(1rem, 2.5vw, 1.5rem);
+  }
+
+  .map-container {
+    max-width: 100%; 
+    border-radius: 50px; 
+    margin-left: -10px; /* Adjust the left shift for smaller screens */
+  }
+
+  .main {
+    padding: 1.5rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    margin-bottom: 1.5rem; 
+  }
+
+  .map-container {
+    width: 100%; 
+    border-radius: 30px; 
+    margin-left: -5px; /* Minimal shift for very small screens */
+  }
+}
