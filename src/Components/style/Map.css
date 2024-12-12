@@ -21,8 +21,7 @@ body {
 .main {
   text-align: center;
   padding: 2rem;
-  width: 90%; 
-  max-width: 1400px;
+  width: 100%; 
   display: flex;
   flex-direction: column;
   justify-content: center;
