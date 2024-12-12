@@ -1,125 +1,118 @@
 :root {
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 700; 
-  color-scheme: light; 
-  color: rgba(0, 0, 0, 0.87); 
-  background-color: #f9f9f9; 
+  font-weight: 700;
+  color-scheme: light;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f9f9f9;
   --font-size-title: clamp(2rem, 5vw, 3.5rem);
-  --font-size-desc: clamp(1.2rem, 2.8vw, 1.8rem); 
+  --font-size-desc: clamp(1.2rem, 2.8vw, 1.8rem);
 }
-/* 
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #eaeaea, #f5f5f5); 
-  animation: fade-in 1s ease-in-out;
-} */
 
+/* Prevent Horizontal Movement */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Layout */
 .main {
   text-align: center;
   padding: 2rem;
-  width: 90%; 
+  width: 100%;
   max-width: 1400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0; 
-  animation: slide-in 1.2s ease forwards; 
+  margin: 0 auto;
 }
 
+/* Description Text */
 .description {
   font-size: var(--font-size-desc);
-  font-weight: 700; 
-  color: rgba(0, 0, 0, 0.75); 
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.75);
   margin-bottom: 2rem;
-  transition: transform 0.3s ease, color 0.3s ease; 
 }
 
-.description:hover {
-  transform: scale(1.1); 
-  color: rgba(0, 0, 0, 0.9); 
-}
-
+/* Map Container */
 .map-container {
-  position: relative;
-  width: 100%; 
-  max-width: 896px; 
-  aspect-ratio: 896 / 596; 
-  border-radius: 90px;
+  width: 100%;
+  max-width: 896px;
+  aspect-ratio: 896 / 596; /* Maintain aspect ratio */
+  border-radius: 2rem; /* Adjusted to avoid clipping on small devices */
   overflow: hidden;
-  background: #ffffff; 
-  transition: transform 0.3s ease;
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
-  margin-left: -20px; /* Shift content slightly to the left */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto; /* Add vertical margin for spacing */
+  position: relative; /* Required for .map-frame positioning */
+  box-sizing: border-box; /* Include padding in size calculations */
 }
 
+/* Map Frame */
 .map-frame {
   width: 100%;
   height: 100%;
-  border: none;
-  transition: transform 0.3s ease; 
+  border-radius: inherit; /* Matches the container's border-radius */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.map-frame:hover {
-  transform: scale(1.05); 
+/* Map Controls */
+.map-controls {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10; /* Ensure visibility over map content */
 }
 
-.map-container:hover {
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); 
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   :root {
     --font-size-title: clamp(1.8rem, 4vw, 2.8rem);
     --font-size-desc: clamp(1rem, 2.5vw, 1.5rem);
   }
 
-  .map-container {
-    max-width: 100%; 
-    border-radius: 50px; 
-    margin-left: -10px; /* Adjust the left shift for smaller screens */
+  .main {
+    padding: 1.5rem;
   }
 
-  .main {
-    padding: 1.5rem; 
+  .map-container {
+    width: 90%; /* Reduced width for better fit */
+    aspect-ratio: 4 / 3; /* Slightly adjusted aspect ratio */
+    border-radius: 1.5rem; /* Smaller radius for smaller devices */
   }
 }
 
 @media (max-width: 480px) {
   .description {
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
   }
 
   .map-container {
-    width: 100%; 
-    border-radius: 30px; 
-    margin-left: -5px; /* Minimal shift for very small screens */
+    width: 95%; /* Nearly full width for small screens */
+    aspect-ratio: 1 / 1; /* Square aspect ratio */
+    border-radius: 1rem; /* Minimal border radius to avoid clipping */
+  }
+
+  .map-frame {
+    width: 100%;
+    height: 100%;
+  }
+
+  .map-controls {
+    bottom: 0.5rem; /* Adjust controls position for smaller screens */
+    right: 0.5rem;
   }
 }
