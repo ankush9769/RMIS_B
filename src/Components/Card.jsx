@@ -13,7 +13,6 @@ export default function Card({ icon, title, description, mobileIcon }) {
           once: false,
           anchorPlacement: 'top-bottom'
         });
-        Aos.refresh();
       }, []);
 
     return (
