@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Style/Card.css';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Card({ icon, title, description, mobileIcon }) {
+
+    useEffect(() => {
+        Aos.init({
+          offset: 0,
+          duration: 600,
+          easing: 'ease-in-out',
+          once: false,
+          anchorPlacement: 'top-bottom'
+        });
+        Aos.refresh();
+      }, []);
+
     return (
-        <div className="card">
+        <div className="card" data-aos='fade-up'>
             <div className="cardIconDiv">
                 <div className="cardIcon">
                     <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="40px" fill="#EA33F7">
