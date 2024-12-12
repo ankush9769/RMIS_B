@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body {
     height: 100vh;
     background-color: #FDFCFA;
     box-sizing: border-box;
-  }
+  } */
   
   .graph {
     display: flex;

@@ -41,7 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #02E2F1;
+    border: 3px solid #02E2F1;
     cursor: default;
 }
 
@@ -61,7 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #02E2F1;
+    border: 3px solid #02E2F1;
     cursor: default;
 }
 
@@ -74,7 +74,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #02E2F1;
+    border: 3px solid #02E2F1;
     border-radius: 100%;
 }
 
@@ -90,9 +90,18 @@
     align-items: center;
 }
 
+.cardTitleMobile{
+    display: none;
+}
+
 @media (max-width: 430px) {
     .cardDescription {
-        display: none;
+        font-size: 1.1rem;
+        flex-direction: column;
+        border-top-left-radius: 5rem;
+        border-top-right-radius: 5rem;
+        height: 100%;
+        border: 7px solid #02E2F1;
     }
 
     .cardTitle {
@@ -100,6 +109,15 @@
         margin-top: 6rem;
         border: none;
         background-color: white;
+        display: none;
+    }
+
+    .cardTitleMobile{
+        margin-top: 2rem;
+        display: flex;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
     }
 
     .cardIcon {
@@ -113,8 +131,8 @@
 
     .cardIconMobile {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 10rem;
-        width: 10rem;
+        height: 7rem;
+        width: 7rem;
         background-color: #D1EFF1;
         position: absolute;
         display: flex;
@@ -122,6 +140,7 @@
         align-items: center;
         border: 7px solid #02E2F1;
         border-radius: 100%;
+        z-index: 100;
     }
 
     .card {
