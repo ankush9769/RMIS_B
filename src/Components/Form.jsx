@@ -1,4 +1,6 @@
-import React from 'react'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
 import './Style/form.css'
 import Contactinfo from '../Components/ContactInfo'
 import { useState } from 'react'
@@ -6,6 +8,16 @@ import { useState } from 'react'
 
 
 const Form = () => {
+  useEffect(() => {
+    Aos.init({
+      offset: 0,
+      duration: 600,
+      easing: 'ease-in-out',
+      once: false,
+      anchorPlacement: 'top-bottom'
+    });
+    Aos.refresh();
+  }, []);
         const [formData, setFormData] = useState({
           name: '',
           email: '',
@@ -38,7 +50,7 @@ const Form = () => {
     return (
         <div className="contact">
                 <Contactinfo></Contactinfo>
-                <form className='form'>
+                <form className='form' data-aos='fade-up'>
                     <p className='headings'>We'd love to hear from you!</p>
                     <input className="input firstinput" name="name" value={formData.name} onChange={handleChange} type="text" placeholder='Enter your full name' />
                     <input className="input" name="email" value={formData.email} onChange={handleChange} type="email" placeholder='Enter your email address' />

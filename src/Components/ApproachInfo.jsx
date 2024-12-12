@@ -1,13 +1,25 @@
-import React from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style/ApproachInfo.css';
 
 
 function BarGraph() {
+  useEffect(() => {
+    Aos.init({
+      offset: 0,
+      duration: 600,
+      easing: 'ease-in-out',
+      once: false,
+      anchorPlacement: 'top-bottom'
+    });
+    Aos.refresh();
+  }, []);
   const navigate = useNavigate();
 
   return (
-    <div className="graph">
+    <div className="graph" data-aos='fade-up'>
       <div
         className="bar bar1"
         style={{ height: '20%' ,width: '7em' }}

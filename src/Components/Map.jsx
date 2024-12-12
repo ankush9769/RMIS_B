@@ -1,9 +1,22 @@
 import "./style/Map.css";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
 
 function Map() {
+  useEffect(() => {
+    Aos.init({
+      offset: 0,
+      duration: 600,
+      easing: 'ease-in-out',
+      once: false,
+      anchorPlacement: 'top-bottom'
+    });
+    Aos.refresh();
+  }, []);
   return (
     <>
-      <div className="main">
+      <div className="main" data-aos='fade-up'>
         <p className="description">FIND US HERE !</p>
 
         <div className="map-container">

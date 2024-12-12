@@ -14,8 +14,8 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; 
+  overflow-y: auto; 
   background: #f9f9f9;
   display: flex;
   flex-direction: column;
@@ -46,24 +46,24 @@ html, body {
 .map-container {
   width: 100%;
   max-width: 896px;
-  aspect-ratio: 896 / 596; /* Maintain aspect ratio */
-  border-radius: 2rem; /* Adjusted to avoid clipping on small devices */
+  aspect-ratio: 896 / 596; 
+  border-radius: 2rem; 
   overflow: hidden;
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto; /* Add vertical margin for spacing */
-  position: relative; /* Required for .map-frame positioning */
-  box-sizing: border-box; /* Include padding in size calculations */
+  margin: 2rem auto; 
+  position: relative; 
+  box-sizing: border-box; 
 }
 
 /* Map Frame */
 .map-frame {
   width: 100%;
   height: 100%;
-  border-radius: inherit; /* Matches the container's border-radius */
+  border-radius: inherit; 
   position: absolute;
   top: 0;
   left: 0;
@@ -74,7 +74,7 @@ html, body {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  z-index: 10; /* Ensure visibility over map content */
+  z-index: 10; 
 }
 
 /* Responsive Adjustments */
@@ -89,9 +89,9 @@ html, body {
   }
 
   .map-container {
-    width: 90%; /* Reduced width for better fit */
-    aspect-ratio: 4 / 3; /* Slightly adjusted aspect ratio */
-    border-radius: 1.5rem; /* Smaller radius for smaller devices */
+    width: 90%; 
+    aspect-ratio: 4 / 3; 
+    border-radius: 1.5rem; 
   }
 }
 
@@ -101,9 +101,9 @@ html, body {
   }
 
   .map-container {
-    width: 95%; /* Nearly full width for small screens */
-    aspect-ratio: 1 / 1; /* Square aspect ratio */
-    border-radius: 1rem; /* Minimal border radius to avoid clipping */
+    width: 95%;
+    aspect-ratio: 1 / 1; 
+    border-radius: 1rem; 
   }
 
   .map-frame {
@@ -112,7 +112,7 @@ html, body {
   }
 
   .map-controls {
-    bottom: 0.5rem; /* Adjust controls position for smaller screens */
+    bottom: 0.5rem; 
     right: 0.5rem;
   }
 }

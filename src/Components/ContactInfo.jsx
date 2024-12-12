@@ -1,10 +1,24 @@
-import React from 'react';
+
 import './Style/Contact.css';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
 
 
 function ContactInfo() {
-  return (
-<div className="contact-details-card">
+    useEffect(() => {
+        Aos.init({
+          offset: 0,
+          duration: 600,
+          easing: 'ease-in-out',
+          once: false,
+          anchorPlacement: 'top-bottom'
+        });
+        Aos.refresh();
+    }, []);
+  return ( 
+<div>
+<div className="contact-details-card" data-aos='fade-up'>
     <h2 className="heading">Let’s Connect and Create Something Exceptional</h2>
     <p className="para">
          Have questions or ready to start your next big project? We’re here to help—reach out today!
@@ -47,6 +61,7 @@ function ContactInfo() {
             </div>
         </div>
     </div>
+</div>
 </div>
 
    
