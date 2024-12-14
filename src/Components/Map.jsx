@@ -7,10 +7,10 @@ function Map() {
   useEffect(() => {
     Aos.init({
       offset: 0,
-      duration: 600,
-      easing: "ease-in-out",
-      once: true, // Prevent repeated triggering
-      anchorPlacement: "top-bottom",
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+      anchorPlacement: 'top-bottom'
     });
     Aos.refresh();
   }, []);
