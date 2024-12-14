@@ -11,7 +11,7 @@ export default function Card({ icon, title, description, mobileIcon }) {
     useEffect(() => {
         Aos.init({
           offset: 0,
-          duration: 600,
+          duration: 1000,
           easing: 'ease-in-out',
           once: false,
           anchorPlacement: 'top-bottom'
