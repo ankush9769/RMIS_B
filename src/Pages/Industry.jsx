@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import Card from '../Components/Card';
 import array from '../Json/Industry.json';
 import './Style/Industry.css';
