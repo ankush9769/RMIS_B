@@ -1,9 +1,14 @@
 import "./style/Map.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function Map() {
+  
+  const location = useLocation();
+  const [timeout, showTimeout] = useState(false);
+
   useEffect(() => {
     Aos.init({
       offset: 0,
@@ -13,10 +18,14 @@ function Map() {
       anchorPlacement: 'top-bottom'
     });
     Aos.refresh();
-  }, []);
+    console.log(location);
+    setTimeout(() => {
+      showTimeout(true);
+    }, 1600);
+  }, [location]);
 
   return (
-    <div className="main" data-aos="fade-up">
+    timeout && <div className="main" data-aos="fade-up">
       <p className="description">FIND US HERE!</p>
       <div className="map-container">
         <iframe

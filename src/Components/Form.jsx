@@ -9,6 +9,7 @@ import { useLocation } from 'react-router-dom';
 const Form = () => {
 
   const location = useLocation();
+  const [timeout, showTimeout] = useState(false);
 
   useEffect(() => {
     Aos.init({
@@ -20,6 +21,9 @@ const Form = () => {
     });
     Aos.refresh();
     console.log(location);
+    setTimeout(() => {
+      showTimeout(true);
+    }, 1000);
   }, [location]);
 
   const [formData, setFormData] = useState({
@@ -54,7 +58,7 @@ const Form = () => {
   return (
     <div key={location.pathname} className="contact">
       <Contactinfo></Contactinfo>
-      <form className='form' data-aos='fade-up'>
+      {timeout && <form className='form' data-aos='fade-up'>
         <p className='headings'>We'd love to hear from you!</p>
         <input className="input firstinput" name="name" value={formData.name} onChange={handleChange} type="text" placeholder='Enter your full name' />
         <input className="input" name="email" value={formData.email} onChange={handleChange} type="email" placeholder='Enter your email address' />
@@ -65,7 +69,7 @@ const Form = () => {
           <button className='button1' onClick={handleReset}>R E S E T</button>
           <button className='button2' onClick={handleSubmit}>S U B M I T</button>
         </div>
-      </form>
+      </form>}
     </div>
   )
 }
