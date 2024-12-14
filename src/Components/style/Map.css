@@ -8,8 +8,8 @@
   --font-size-desc: clamp(1.2rem, 2.8vw, 1.8rem);
 }
 
-/* Prevent Horizontal Movement */
-html, body {
+
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -21,7 +21,7 @@ html, body {
   flex-direction: column;
 }
 
-/* Main Layout */
+
 .main {
   text-align: center;
   padding: 2rem;
@@ -32,52 +32,56 @@ html, body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* Description Text */
+
 .description {
   font-size: var(--font-size-desc);
   font-weight: 700;
   color: rgba(0, 0, 0, 0.75);
   margin-bottom: 2rem;
+  text-align: center;
+  word-wrap: break-word;
 }
 
-/* Map Container */
+
 .map-container {
   width: 100%;
   max-width: 896px;
-  aspect-ratio: 896 / 596; 
-  border-radius: 2rem; 
+  height: auto;
+  aspect-ratio: 896 / 596;
+  border-radius: 2rem;
   overflow: hidden;
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto; 
-  position: relative; 
-  box-sizing: border-box; 
+  margin: 2rem auto;
+  position: relative;
+  box-sizing: border-box;
 }
 
-/* Map Frame */
+
 .map-frame {
   width: 100%;
   height: 100%;
-  border-radius: inherit; 
+  border-radius: inherit;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-/* Map Controls */
+
 .map-controls {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  z-index: 10; 
+  z-index: 10;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   :root {
     --font-size-title: clamp(1.8rem, 4vw, 2.8rem);
@@ -89,21 +93,31 @@ html, body {
   }
 
   .map-container {
-    width: 90%; 
-    aspect-ratio: 4 / 3; 
-    border-radius: 1.5rem; 
+    width: 90%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 1.5rem;
+    min-height: 200px;
   }
 }
 
 @media (max-width: 480px) {
+  :root {
+    --font-size-title: clamp(1.6rem, 4vw, 2.5rem);
+    --font-size-desc: clamp(0.9rem, 2vw, 1.3rem);
+  }
+
   .description {
     margin-bottom: 1.5rem;
   }
 
   .map-container {
-    width: 95%;
-    aspect-ratio: 1 / 1; 
-    border-radius: 1rem; 
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    min-height: 250px;
   }
 
   .map-frame {
@@ -112,7 +126,7 @@ html, body {
   }
 
   .map-controls {
-    bottom: 0.5rem; 
+    bottom: 0.5rem;
     right: 0.5rem;
   }
 }
