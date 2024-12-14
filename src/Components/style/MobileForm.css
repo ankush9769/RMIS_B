@@ -1,0 +1,132 @@
+.mobileForm {
+    background:linear-gradient(to bottom ,#fadff4, #cbe1fd,#e6eef8,#e6eef8,#e6eef8,#e6eef8,#e6eef8);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 44.5rem;
+}
+
+.container {
+    background-color:  #ffe2f7;
+    width: 400px;
+    padding: 30px;
+    border-top-left-radius: 15rem;
+    border-top-right-radius: 15rem;
+    text-align: center;
+    margin-top: 6rem;
+    box-shadow:#a5a5a5 0rem 0.3rem 0.5rem;
+
+}
+
+.speech-bubble {
+    position: relative;
+    background-color: white;
+    border-radius: 30px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speech-bubble:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    margin-left: -12px;
+}
+
+.speech-bubble p {
+    font-size: 12px;
+    margin: 0;
+    padding: 5px;
+}
+
+.pacman {
+    background-color: #87C1FF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+.pacman-eye {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 22px;
+}
+.mobileH {
+    font-weight: 400;
+    margin: 20px 0;
+    font-size: 0.8rem;
+    margin-top: 3rem;
+
+}
+.mobileInput[type="text"],
+.mobileInput[type="email"],
+.mobileInput[type="tel"],
+.mobileArea {
+    border: none;
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.reset-btn {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 27px;
+    margin: 10px;
+    font-weight:500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #a5e3ff;
+    color: #ffffff;
+
+    &:hover {
+        background-color: #ddd;
+    }
+}
+
+.submit-btn {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 23px;
+    margin: 10px;
+    font-weight:500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #ddd;
+
+    &:hover {
+        background-color: #ddd;
+    }
+}
+
+
+
+.fbuttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
