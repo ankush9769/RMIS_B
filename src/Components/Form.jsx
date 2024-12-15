@@ -57,21 +57,30 @@ const Form = () => {
     });
   };
   return (
-    <div key={location.pathname} className="contact">
-      <Contactinfo></Contactinfo>
-      {timeout && <form className='form' data-aos='fade-up'>
-        <p className='headings'>We'd love to hear from you!</p>
-        <input className="input firstinput" name="name" value={formData.name} onChange={handleChange} type="text" placeholder='Enter your full name' />
-        <input className="input" name="email" value={formData.email} onChange={handleChange} type="email" placeholder='Enter your email address' />
-        <input className="input" name="phone" value={formData.phone} onChange={handleChange} type="tel" placeholder='Enter your phone number' />
-        <input className="input" name="inquiry" value={formData.inquiry} onChange={handleChange} type='text' placeholder="what's your inquiry about?" />
-        <textarea className='textarea' name="message" value={formData.message} onChange={handleChange} placeholder="type your message here..." />
-        <div className="buttondiv">
-          <button className='button1' onClick={handleReset}>R E S E T</button>
-          <button className='button2' onClick={handleSubmit}>S U B M I T</button>
+    <>
+      <div className='desktopForm'>
+        <div key={location.pathname} className="contact">
+          <Contactinfo></Contactinfo>
+          {timeout && <form className='form' data-aos='fade-up'>
+            <p className='headings'>We'd love to hear from you!</p>
+            <input className="input firstinput" name="name" value={formData.name} onChange={handleChange} type="text" placeholder='Enter your full name' />
+            <input className="input" name="email" value={formData.email} onChange={handleChange} type="email" placeholder='Enter your email address' />
+            <input className="input" name="phone" value={formData.phone} onChange={handleChange} type="tel" placeholder='Enter your phone number' />
+            <input className="input" name="inquiry" value={formData.inquiry} onChange={handleChange} type='text' placeholder="what's your inquiry about?" />
+            <textarea className='textarea' name="message" value={formData.message} onChange={handleChange} placeholder="type your message here..." />
+            <div className="buttondiv">
+              <button className='button1' onClick={handleReset}>R E S E T</button>
+              <button className='button2' onClick={handleSubmit}>S U B M I T</button>
+            </div>
+          </form>}
         </div>
-      </form>}
-    </div>
+      </div>
+      <div className="MobileForm">
+        <MobileForm />
+      </div>
+    </>
+
+
   )
 }
 

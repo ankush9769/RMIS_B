@@ -4,15 +4,15 @@
     padding: 0;
     display: flex;
     justify-content: center;
-    height: 44.5rem;
+    height: 80vh;
 }
 
 .container {
     background-color:  #ffe2f7;
-    width: 400px;
+    width: 100%;
     padding: 30px;
-    border-top-left-radius: 15rem;
-    border-top-right-radius: 15rem;
+    border-top-left-radius: 21rem;
+    border-top-right-radius: 21rem;
     text-align: center;
     margin-top: 6rem;
     box-shadow:#a5a5a5 0rem 0.3rem 0.5rem;
@@ -74,7 +74,7 @@
     font-weight: 400;
     margin: 20px 0;
     font-size: 0.8rem;
-    margin-top: 3rem;
+    margin-top: 18vw;
 
 }
 .mobileInput[type="text"],
@@ -121,12 +121,20 @@
     }
 }
 
-
-
 .fbuttons{
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-content: space-between;
     align-items: center;
+}
+@media (max-width: 414px )and (min-width: 374px) {
+    .mobileForm{
+        height: 110vh;
+    } 
+}
+@media (max-width: 374px) {
+    .mobileForm{
+        height: 100vh;
+    } 
 }
