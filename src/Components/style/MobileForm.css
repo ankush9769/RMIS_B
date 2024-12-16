@@ -128,13 +128,30 @@
     justify-content: space-between;
     align-items: center;
 }
+.pokiface{
+    position: absolute;
+    top: 5rem;
+    left: 30vw;
+
+}
 @media (max-width: 414px )and (min-width: 374px) {
     .mobileForm{
         height: 110vh;
     } 
+    .pokiface{
+        position: absolute;
+        top: 5rem;
+        left: 20vw;
+    }
 }
 @media (max-width: 374px) {
     .mobileForm{
         height: 100vh;
     } 
+    .pokiface{
+        position: absolute;
+        top: 5rem;
+        left: 20vw;
+    }
+    
 }
