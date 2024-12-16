@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div>
       <Form/>
-      <Map/>
+       <Map/> 
     </div> 
   )
 }
