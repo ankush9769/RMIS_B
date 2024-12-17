@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
-import PacmanWithSpeechBubble from './PacmanWithSpeechBubble';
 import './style/MobileForm.css'
 
 export default function MobileForm() {
