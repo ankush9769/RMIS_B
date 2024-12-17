@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
+import PacmanWithSpeechBubble from './PacmanWithSpeechBubble';
 import './style/MobileForm.css'
 
 export default function MobileForm() {
@@ -9,8 +10,8 @@ export default function MobileForm() {
         phone: '',
         inquiry: '',
         message: ''
-      });
-    
+    });
+
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormData({
@@ -35,12 +36,9 @@ export default function MobileForm() {
     return (
         <div className='mobileForm'>
             <div className='container'>
-                {/* <div className="pacman">
-                <div className="pacman-eye"></div>
-            </div> */}
-                {/* <div className="speech-bubble">
-                <p>We'd love to hear from you!</p>
-            </div> */}
+                <div className='pokiface'>
+                    <PacmanWithSpeechBubble />
+                </div>
                 <p className='mobileH'>Have questions or ready to start your next big project? We're here to help—reach out today!</p>
                 <form>
                     <input className='mobileInput' name="name" value={formData.name} onChange={handleChange} type="text" placeholder="Enter your full name" required />
