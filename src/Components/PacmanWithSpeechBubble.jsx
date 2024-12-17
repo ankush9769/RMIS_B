@@ -36,12 +36,12 @@ const PacmanWithSpeechBubble = () => {
 
       ctx.quadraticCurveTo(250, 5, 270, 55);  // Top right curve, slightly adjusted
       ctx.quadraticCurveTo(250, 120, 200, 120);  // Bottom right curve
-      ctx.lineTo(10, 110);  // Bottom edge
+      ctx.lineTo(165, 40);  // Bottom edge
 
       // Adjusted the tail position to come from below the bubble, not from the mouth area
-      ctx.lineTo(170, 100);  // Tail of the bubble, adjusted further down
+      ctx.lineTo(200, 100);  // Tail of the bubble, adjusted further down
       ctx.lineTo(190, 105);  // Tail back up
-      ctx.quadraticCurveTo(130, 85, 150, 85);  // Left side curve
+      ctx.quadraticCurveTo(120, 85, 150, 85);  // Left side curve
       ctx.closePath();
       ctx.fillStyle = '#ffffff';  // White for bubble
       ctx.fill();
