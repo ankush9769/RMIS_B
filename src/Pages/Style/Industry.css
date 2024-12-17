@@ -1,25 +1,25 @@
-.industry{
+.industry {
     width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
 }
 
-.indusGrid{
+.indusGrid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, minmax(14rem, 1fr));
     grid-template-rows: repeat(3, minmax(14rem, 1fr));
 }
 
-.indusCard{
+.indusCard {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-@media (width <= 768px) {
-    .indusGrid{
+@media (width <=768px) {
+    .indusGrid {
         grid-template-columns: repeat(3, minmax(14rem, 1fr));
         grid-template-rows: repeat(4, minmax(14rem, 1fr));
     }
