@@ -11,7 +11,7 @@ const PacmanWithSpeechBubble = () => {
     function drawPacman() {
       ctx.beginPath();
       // Adjust the arc angles to make the mouth smaller, and fit the smaller canvas
-      ctx.arc(100, 85, 50, 0.1 * Math.PI, 1.9 * Math.PI); 
+      ctx.arc(100, 85, 50, 0.1 * Math.PI, 1.9 * Math.PI);
       ctx.lineTo(100, 85);
       ctx.closePath();
       ctx.fillStyle = '#7caef4';  // Light blue
@@ -31,13 +31,17 @@ const PacmanWithSpeechBubble = () => {
     // Draw Speech Bubble
     function drawSpeechBubble() {
       ctx.beginPath();
-      ctx.moveTo(150, 10);  // Top left of speech bubble
-      ctx.quadraticCurveTo(300, 25, 300, 85);  // Top right curve
-      ctx.quadraticCurveTo(300, 150, 230, 150);  // Bottom right curve
-      ctx.lineTo(200, 150);  // Bottom edge
-      ctx.lineTo(180, 160);  // Tail of the bubble
-      ctx.lineTo(190, 135);  // Tail back up
-      ctx.quadraticCurveTo(150, 115, 150, 85);  // Left side curve
+      // Adjusted positions to move the speech bubble upwards and to the right of Pacman
+      ctx.moveTo(160, 40);  // Top left of speech bubble, moved up from (170, 50)
+
+      ctx.quadraticCurveTo(250, 5, 270, 55);  // Top right curve, slightly adjusted
+      ctx.quadraticCurveTo(250, 120, 200, 120);  // Bottom right curve
+      ctx.lineTo(10, 110);  // Bottom edge
+
+      // Adjusted the tail position to come from below the bubble, not from the mouth area
+      ctx.lineTo(170, 100);  // Tail of the bubble, adjusted further down
+      ctx.lineTo(190, 105);  // Tail back up
+      ctx.quadraticCurveTo(130, 85, 150, 85);  // Left side curve
       ctx.closePath();
       ctx.fillStyle = '#ffffff';  // White for bubble
       ctx.fill();
@@ -46,8 +50,8 @@ const PacmanWithSpeechBubble = () => {
       // Add text inside bubble
       ctx.fillStyle = '#000000';  // Black text
       ctx.font = 'bold 14px Arial';
-      ctx.fillText("We’d love to", 170, 70);
-      ctx.fillText("hear from you!",170, 95);
+      ctx.fillText("We’d love to", 170, 50);  // Adjusted text position
+      ctx.fillText("hear from you!", 170, 75);  // Adjusted text position
     }
 
     // Call functions to draw the scene
