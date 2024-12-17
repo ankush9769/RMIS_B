@@ -29,39 +29,39 @@ const PacmanWithSpeechBubble = () => {
     }
 
     // Draw Speech Bubble
-    function drawSpeechBubble() {
-      ctx.beginPath();
-      // Adjusted positions to move the speech bubble upwards and to the right of Pacman
-      ctx.moveTo(160, 40);  // Top left of speech bubble, moved up from (170, 50)
+    // function drawSpeechBubble() {
+    //   ctx.beginPath();
+    //   // Adjusted positions to move the speech bubble upwards and to the right of Pacman
+    //   ctx.moveTo(160, 40);  // Top left of speech bubble, moved up from (170, 50)
 
-      ctx.quadraticCurveTo(250, 5, 270, 55);  // Top right curve, slightly adjusted
-      ctx.quadraticCurveTo(250, 120, 200, 120);  // Bottom right curve
-      ctx.lineTo(165, 40);  // Bottom edge
+    //   ctx.quadraticCurveTo(250, 5, 270, 55);  // Top right curve, slightly adjusted
+    //   ctx.quadraticCurveTo(250, 120, 200, 120);  // Bottom right curve
+    //   ctx.lineTo(165, 40);  // Bottom edge
 
-      // Adjusted the tail position to come from below the bubble, not from the mouth area
-      ctx.lineTo(200, 100);  // Tail of the bubble, adjusted further down
-      ctx.lineTo(190, 105);  // Tail back up
-      ctx.quadraticCurveTo(120, 85, 150, 85);  // Left side curve
-      ctx.closePath();
-      ctx.fillStyle = '#ffffff';  // White for bubble
-      ctx.fill();
-      ctx.stroke();
+    //   // Adjusted the tail position to come from below the bubble, not from the mouth area
+    //   ctx.lineTo(200, 100);  // Tail of the bubble, adjusted further down
+    //   ctx.lineTo(190, 105);  // Tail back up
+    //   ctx.quadraticCurveTo(120, 85, 150, 85);  // Left side curve
+    //   ctx.closePath();
+    //   ctx.fillStyle = '#ffffff';  // White for bubble
+    //   ctx.fill();
+    //   ctx.stroke();
 
-      // Add text inside bubble
-      ctx.fillStyle = '#000000';  // Black text
-      ctx.font = 'bold 14px Arial';
-      ctx.fillText("We’d love to", 170, 50);  // Adjusted text position
-      ctx.fillText("hear from you!", 170, 75);  // Adjusted text position
-    }
+    //   // Add text inside bubble
+    //   ctx.fillStyle = '#000000';  // Black text
+    //   ctx.font = 'bold 14px Arial';
+    //   ctx.fillText("We’d love to", 170, 50);  // Adjusted text position
+    //   ctx.fillText("hear from you!", 170, 75);  // Adjusted text position
+    // }
 
     // Call functions to draw the scene
     drawPacman();
-    drawSpeechBubble();
+    // drawSpeechBubble();
   }, []);
 
   return (
     <div>
-      <canvas ref={canvasRef} width={300} height={170} style={{ }}></canvas>
+      <canvas ref={canvasRef} width={150} height={140} style={{ }}></canvas>
     </div>
   );
 };

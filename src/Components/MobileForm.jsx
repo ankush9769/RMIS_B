@@ -36,8 +36,9 @@ export default function MobileForm() {
     return (
         <div className='mobileForm'>
             <div className='container'>
-                <div className='pokiface'>
-                    <PacmanWithSpeechBubble />
+                <div className="emoji">
+                    <div className='pokiface'>
+                    </div>
                 </div>
                 <p className='mobileH'>Have questions or ready to start your next big project? We're here to help—reach out today!</p>
                 <form>

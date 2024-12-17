@@ -7,6 +7,7 @@
     height: 80vh;
 }
 
+
 .container {
     background-color:  #ffe2f7;
     width: 100%;
@@ -19,57 +20,6 @@
 
 }
 
-.speech-bubble {
-    position: relative;
-    background-color: white;
-    border-radius: 30px;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.speech-bubble:before {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: 12px solid transparent;
-    border-top-color: white;
-    border-bottom: 0;
-    margin-left: -12px;
-}
-
-.speech-bubble p {
-    font-size: 12px;
-    margin: 0;
-    padding: 5px;
-}
-
-.pacman {
-    background-color: #87C1FF;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    clip-path: polygon(100% 50%, 0 0, 0 100%);
-}
-.pacman-eye {
-    width: 8px;
-    height: 8px;
-    background-color: #000;
-    border-radius: 50%;
-    position: absolute;
-    top: 15px;
-    left: 22px;
-}
 .mobileH {
     font-weight: 400;
     margin: 20px 0;
@@ -129,29 +79,33 @@
     align-items: center;
 }
 .pokiface{
+    position: relative;
+   width: 200px;
+   height: 100px;
+    background-image: url(emoji.png);
+    background-size:cover;
+}
+.emoji{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
     position: absolute;
-    top: 5rem;
-    left: 30vw;
+    top: 7rem;
+    left: 0vw;
 
 }
 @media (max-width: 414px )and (min-width: 374px) {
     .mobileForm{
         height: 110vh;
     } 
-    .pokiface{
-        position: absolute;
-        top: 5rem;
-        left: 20vw;
-    }
+    
 }
 @media (max-width: 374px) {
     .mobileForm{
         height: 100vh;
     } 
-    .pokiface{
-        position: absolute;
-        top: 5rem;
-        left: 20vw;
-    }
+    
     
 }
