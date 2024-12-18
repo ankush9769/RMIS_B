@@ -1,0 +1,70 @@
+.cycle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f3f4f6;
+  }
+  
+  .circle {
+    position: relative;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    border: 14px solid #00bcd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; 
+  }
+  
+  .circle-item {
+    position: absolute;
+    width: 5em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #333;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: linear-gradient(45deg, #8bd0f5, #ffb3d9);
+  }
+  
+  .circle-item:hover {
+    transform: scale(1.2); 
+    background: #00bcd4;
+    color: white;
+  }
+  .center-text {
+    position: absolute;
+    font-size: 1.5em; 
+   color: #333;
+    text-align: center;
+  }
+  .hollow-circle {
+    position: absolute;
+    width: 8em; 
+    height: 8em;
+    border-radius: 50%;
+    border: 15px solid #89d7e1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inner-circle {
+    width: 6em; 
+    height: 6em;
+    border-radius: 50%;
+    background: rgb(169, 175, 232); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
