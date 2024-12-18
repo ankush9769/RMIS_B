@@ -31,9 +31,9 @@
 }
 
 .map-container {
-  width: 100%; /* Full width of the page */
+  width: 120%; 
   height: auto;
-  aspect-ratio: 2500 / 1500; /* Aspect ratio remains unchanged */
+  aspect-ratio: 2500 / 1500; 
   border-radius: 2rem;
   overflow: hidden;
   background: #ffffff;
@@ -46,6 +46,8 @@
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
+  left: 50%;
+  transform: translateX(-50%); 
 }
 
 .map-frame {
@@ -75,11 +77,13 @@
   }
 
   .map-container {
-    width: 100%; /* Full width for smaller screens */
+    width: 100%; 
     height: auto;
     aspect-ratio: 4 / 3;
     border-radius: 1.5rem;
     min-height: 350px;
+    left: 50%;
+    transform: translateX(-50%); 
   }
 }
 
@@ -94,12 +98,14 @@
   }
 
   .map-container {
-    width: 100%; /* Full width for very small screens */
+    width: 100%; 
     height: auto;
     aspect-ratio: 1 / 1;
     border-radius: 1rem;
     margin: 1rem auto;
     min-height: 500px;
+    left: 50%;
+    transform: translateX(-50%); 
   }
 
   .map-frame {
