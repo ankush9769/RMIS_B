@@ -1,0 +1,16 @@
+.approachdesktop{
+    display:block;
+}
+.approachmobile{
+    display: none;
+}
+@media (width<=768px) {
+    .approachdesktop{
+        display:none;
+    }
+    .approachmobile{
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+}

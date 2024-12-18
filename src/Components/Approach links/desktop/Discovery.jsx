@@ -1,30 +1,8 @@
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import React, { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import './style/ApproachInfo.css';
+import React from 'react';
 
-
-function BarGraph() {
-
-  const location = useLocation();
-
-  useEffect(() => {
-    Aos.init({
-      offset: 0,
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: false,
-      anchorPlacement: 'top-bottom'
-    });
-    Aos.refresh();
-    console.log(location);
-  }, [location]);
-
-  const navigate = useNavigate();
-
+function Discovery() {
   return (
-    <div key={location.pathname} className='approachdesktop' data-aos="fade-up">
+    <div>
       <style>
         {`
           .container {
@@ -82,5 +60,4 @@ function BarGraph() {
   );
 }
 
-export default BarGraph;
-
+export default Discovery;
