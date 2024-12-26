@@ -16,6 +16,7 @@ const TestingPhase = () => {
             width: 65%;
             font-size: 20px;
             text-align:justify;
+            margin-top:5rem;
           }
 
           .card {

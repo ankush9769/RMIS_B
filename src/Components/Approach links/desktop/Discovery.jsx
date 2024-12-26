@@ -16,6 +16,7 @@ function Discovery() {
             width: 60%;
             font-size: 20px;
             text-align:justify;
+            margin-top:5rem;
           }
           .card {
             width: 300px;

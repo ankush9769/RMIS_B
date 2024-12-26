@@ -6,7 +6,7 @@ const Insights = () => {
       <style>
         {`
           .insights-page {
-            padding: 2em;
+            // padding: 2em;
           }
 
           .insights-page h1 {
@@ -16,7 +16,7 @@ const Insights = () => {
 
           .container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: flex-start;
             max-width: 1000px;
             margin: 0 auto;

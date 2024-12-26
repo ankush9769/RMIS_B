@@ -10,6 +10,7 @@ const Discovery = () => {
             justify-content: center;
             gap: 1em;
             margin: 0 auto;
+            
           }
 
           .info {
@@ -18,6 +19,8 @@ const Discovery = () => {
             font-size: 20px;
             text-align: justify;
             margin-right: 2em; 
+            // margin-top:2rem;
+            
           }
 
           .card {
